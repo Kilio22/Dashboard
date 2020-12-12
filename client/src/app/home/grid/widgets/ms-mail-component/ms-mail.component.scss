@@ -1,0 +1,9 @@
+@import '../../../../../../node_modules/bootstrap/scss/mixins/breakpoints';
+@import '../../../../../../node_modules/@nebular/theme/styles/global/breakpoints';
+@import '../../../../../../node_modules/@nebular/theme/styles/theming';
+@import '../../../../../themes';
+
+@include nb-install-component() {
+    height: 100%;
+    position: relative;
+}

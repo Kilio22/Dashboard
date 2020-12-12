@@ -1,0 +1,54 @@
+<nb-spinner *ngIf="isLoading">
+</nb-spinner>
+<div *ngIf="!isLoading">
+    <form (ngSubmit)="onSubmit()" #form="ngForm" aria-labelledby="title">
+        <nb-card>
+            <nb-card-body>
+                <nb-form-field>
+                    <nb-icon nbPrefix icon="search-outline" pack="eva"></nb-icon>
+                    <input type="text" id="input-search-weather" [(ngModel)]="searchBuffer" name="search" nbInput
+                           fullWidth
+                           fieldSize="medium"
+                           placeholder="Enter city name">
+                </nb-form-field>
+            </nb-card-body>
+        </nb-card>
+    </form>
+    <div *ngIf="!weather" class="d-flex justify-content-center">
+        <p class="font-weight-bold">Nothing to display</p>
+    </div>
+    <div *ngIf="weather">
+        <div class="text-center">
+            <img [src]="weather.imageUrl" class="img-fluid" alt="weather image">
+            <p class="font-weight-bold mb-1">{{weather.temperature}}°C</p>
+            <p class="font-italic mb-1">{{weather.skytext}}</p>
+            <p class="mb-1">{{weather.observationpoint}}</p>
+        </div>
+        <table class="table table-bordered table-sm">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">Feels like</th>
+                <td>{{weather.feelslike}}°C</td>
+            </tr>
+            <tr>
+                <th scope="row">Humidity</th>
+                <td>{{weather.humidity}}%</td>
+            </tr>
+            <tr>
+                <th scope="row">Date</th>
+                <td>{{weather.date}}</td>
+            </tr>
+            <tr>
+                <th scope="row">Wind speed</th>
+                <td>{{weather.winddisplay}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

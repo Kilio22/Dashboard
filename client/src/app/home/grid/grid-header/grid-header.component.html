@@ -1,0 +1,14 @@
+<div class="d-flex px-2 grid-widget-header">
+    <div class="mr-auto font-weight-bold">
+        {{ name }}
+    </div>
+    <div class="drag-handler mr-2">
+        <fa-icon [icon]="icons.faArrowsAlt"></fa-icon>
+    </div>
+    <div class="mr-2">
+        <fa-icon [icon]="icons.faStopwatch" (click)="onTimerClicked()"></fa-icon>
+    </div>
+    <div (click)="onTrashClicked()">
+        <fa-icon [icon]="icons.faTrash"></fa-icon>
+    </div>
+</div>

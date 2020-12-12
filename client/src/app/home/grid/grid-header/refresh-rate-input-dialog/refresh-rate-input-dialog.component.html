@@ -1,0 +1,10 @@
+<nb-card>
+    <nb-card-header>Enter the refresh rate for this widget (in seconds)</nb-card-header>
+    <nb-card-body>
+        <input #name type="number" nbInput [value]="refreshRate" fullWidth>
+    </nb-card-body>
+    <nb-card-footer class="d-flex">
+        <button nbButton status="danger" id="refresh-rate-cancel" class="mr-auto" (click)="cancel()">Cancel</button>
+        <button nbButton status="success" (click)="submit(name.value)">Submit</button>
+    </nb-card-footer>
+</nb-card>

@@ -1,0 +1,46 @@
+<nb-layout windowMode>
+
+    <nb-layout-header fixed>
+        <app-header></app-header>
+    </nb-layout-header>
+
+    <nb-sidebar>
+        <nb-menu [items]="items"></nb-menu>
+    </nb-sidebar>
+
+    <nb-layout-column>
+        <div *ngIf="isLoading">
+            <nb-spinner></nb-spinner>
+        </div>
+        <div *ngIf="!isLoading && errorMessage">
+            <div class="d-flex justify-content-center">
+                <span class="text-danger font-weight-bold">{{errorMessage}}</span>
+            </div>
+        </div>
+        <div *ngIf="!isLoading && !errorMessage">
+            <table class="table table-bordered table-hover table-striped">
+                <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Action</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">Email</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let user of users">
+                    <td>
+                        <nb-icon nbPrefix icon="trash-outline" pack="eva" (click)="onDeleteClick(user.id)"></nb-icon>
+                    </td>
+                    <td>{{user.displayName}}</td>
+                    <td>{{user.email}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </nb-layout-column>
+
+    <nb-layout-footer fixed>
+        <app-footer></app-footer>
+    </nb-layout-footer>
+
+</nb-layout>

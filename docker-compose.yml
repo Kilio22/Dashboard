@@ -1,0 +1,50 @@
+version: "3"
+
+services:
+  client:
+    build: ./client
+    ports:
+      - "80:80"
+    networks:
+      - front-tier
+    depends_on:
+      - server
+    restart: unless-stopped
+
+  db:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - db-data:/data/db
+    networks:
+      - back-tier
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=hein
+      - MONGO_INITDB_ROOT_PASSWORD=ilnesarreteplus
+    restart: unless-stopped
+
+  server:
+    build: ./server
+    ports:
+      - "8080:8080"
+    networks:
+      - front-tier
+      - back-tier
+    environment:
+      - FRONT_PORT=80
+      - MONGO_HOST=db
+      - MONGO_PORT=27017
+      - MONGO_USER=hein
+      - MONGO_PASSWORD=ilnesarreteplus
+      - MONGO_DEFAULT=dashboard-prod
+    depends_on:
+      - db
+    restart: unless-stopped
+
+networks:
+  front-tier:
+  back-tier:
+
+volumes:
+  db-data:

@@ -1,0 +1,31 @@
+@import '../../../../../../node_modules/bootstrap/scss/mixins/breakpoints';
+@import '../../../../../../node_modules/@nebular/theme/styles/global/breakpoints';
+@import '../../../../../../node_modules/@nebular/theme/styles/theming';
+@import '../../../../../themes';
+
+@include nb-install-component() {
+    height: 100%;
+    position: relative;
+}
+
+.w-35 {
+    width: 35% !important;
+}
+
+.centered-and-cropped {
+    object-fit: cover;
+}
+
+.music-genre-tag {
+    background-color: grey;
+    border-radius: 1rem;
+    border-width: 1px;
+    padding-left: .25rem;
+    padding-right: .25rem;
+}
+
+.cancel-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+}

@@ -1,0 +1,48 @@
+<nb-spinner *ngIf="isLoading">
+</nb-spinner>
+
+<div *ngIf="!isLoading && !isAuthenticated" id="not-connected-div" class="d-flex justify-content-center h-100">
+    <button nbButton outline status="primary" class="my-auto" (click)="onLoginClick()">
+        <fa-icon [icon]="icons.faSpotify"></fa-icon>
+        &nbsp; Login with spotify
+    </button>
+</div>
+
+<div *ngIf="isAuthenticated" class="d-flex flex-column h-100">
+    <form *ngIf="artistQuery.trim().length === 0"
+          id="artist-id-form"
+          class="d-flex flex-column align-content-center justify-content-around h-100 p-4"
+          #form="ngForm"
+          (ngSubmit)="onSubmit(form)"
+    >
+        <nb-form-field class="">
+            <nb-icon nbPrefix icon="search-outline" pack="eva"></nb-icon>
+            <input type="text" name="search"
+                   placeholder="Enter an artist ID"
+                   ngModel required
+                   nbInput fullWidth fieldSize="medium"
+            >
+        </nb-form-field>
+        <span *ngIf="errorMsg.length > 0" class="text-danger font-weight-bold">{{ errorMsg }}</span>
+        <button nbButton status="success" type="submit">Go</button>
+    </form>
+    <div *ngIf="currentArtist" id="current-artist-div" class="d-flex h-100">
+        <img [src]="currentArtist.image" alt="Artist picture" class="w-35 h-100 centered-and-cropped">
+        <div class="d-flex flex-column w-100 m-2">
+            <span class="text-center font-weight-bold text-primary">{{ currentArtist.name }}</span>
+            <div class="text-center">
+                <span class="font-weight-bold text-secondary">{{ currentArtist.followers }}</span>
+                <span> followers</span>
+            </div>
+            <div class="mt-1">
+                <div *ngFor="let genre of currentArtist.genres" class="music-genre-tag d-inline-block text-light ml-1">{{ genre }}</div>
+            </div>
+            <nb-progress-bar status="info" size="small" [value]="currentArtist.popularity" class="mt-auto">
+                Popularity: {{ currentArtist.popularity }}
+            </nb-progress-bar>
+        </div>
+        <div class="cancel-button px-1">
+            <fa-icon [icon]="icons.faTimes" (click)="onExitClick()"></fa-icon>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,65 @@
+<nb-spinner *ngIf="isLoading">
+</nb-spinner>
+<div *ngIf="!isTwitchAuthed && !isLoading" class="d-flex h-100 justify-content-center">
+    <div class="d-flex align-items-center">
+        <button nbButton outline status="primary" (click)="onLoginClick()">
+            <fa-icon [icon]="faTwitch"></fa-icon>
+            &nbsp; Login with Twitch
+        </button>
+    </div>
+</div>
+<div *ngIf="isTwitchAuthed && !isLoading">
+    <form (ngSubmit)="onSubmit()" #form="ngForm" aria-labelledby="title">
+        <nb-card>
+            <nb-card-body>
+                <nb-form-field>
+                    <nb-icon nbPrefix icon="search-outline" pack="eva"></nb-icon>
+                    <input type="text" id="input-search-ttv-user" [(ngModel)]="searchBuffer" name="search" nbInput
+                           fullWidth
+                           fieldSize="medium"
+                           placeholder="Enter twitch username">
+                </nb-form-field>
+            </nb-card-body>
+        </nb-card>
+    </form>
+    <div *ngIf="!user" class="d-flex justify-content-center">
+        <p class="font-weight-bold">Nothing to display</p>
+    </div>
+    <div *ngIf="user">
+        <div class="fluid-container">
+            <div class="row no-gutters d-flex align-items-center">
+                <div class="col-md">
+                    <div class="d-flex justify-content-center">
+                        <img
+                            [src]="user.profile_image_url"
+                            class="img-fluid" alt="user image">
+                    </div>
+                </div>
+
+                <div class="col-md">
+                    <div class="flex-grow-1 py-4 px-5">
+                        <div class="d-flex justify-content-between">
+                            <p class="text-uppercase font-weight-bold mr-1">Username</p>
+                            <p>{{user.display_name}}</p>
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                            <p class="text-uppercase font-weight-bold mr-1">Partner</p>
+                            <p>{{user.broadcaster_type === 'partner' ? 'Yes' : 'No'}}</p>
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                            <p class="text-uppercase font-weight-bold mr-1">Views</p>
+                            <p>{{user.view_count}}</p>
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                            <p class="text-uppercase font-weight-bold mr-1">Creation</p>
+                            <p>{{user.created_at}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

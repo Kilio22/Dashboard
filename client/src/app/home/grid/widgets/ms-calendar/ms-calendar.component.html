@@ -1,0 +1,36 @@
+<nb-spinner *ngIf="isLoading">
+</nb-spinner>
+
+<div *ngIf="!isLoading && !isAuthenticated" class="d-flex justify-content-center h-100">
+    <button nbButton outline status="primary" class="my-auto" (click)="onLoginClick()">
+        <fa-icon [icon]="icons.faMicrosoft"></fa-icon>
+        &nbsp; Login with microsoft
+    </button>
+</div>
+
+<div *ngIf="isAuthenticated" class="d-flex flex-column h-100">
+    <nb-select
+        placeholder="Select calendar"
+        class="p-2"
+        [selected]="selectedCalendar"
+        (selectedChange)="onCalendarSelected($event)"
+        fullWidth
+    >
+        <nb-option *ngFor="let calendar of calendarList" [value]="calendar">{{ calendar.name }}</nb-option>
+    </nb-select>
+    <div *ngIf="errorMsg.length === 0" class="mx-2" style="overflow-x: hidden; overflow-y: auto">
+        <div *ngFor="let event of eventList; let isFirst = first; let index = index;">
+            <div class="dropdown-divider" *ngIf="!isFirst"></div>
+            <div class="d-flex justify-content-between">
+                <span>Event #{{ index + 1 }}</span>
+                <span class="text-info">[{{ getEventStartTime(event) }} - {{ getEventEndTime(event) }}]</span>
+            </div>
+            <div class="mt-1">
+                <span>{{ event.subject }}</span>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="errorMsg.length > 0" class="m-2 h-100">
+        <p class="text-danger">{{ errorMsg }}</p>
+    </div>
+</div>

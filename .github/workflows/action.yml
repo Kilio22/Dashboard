@@ -1,0 +1,30 @@
+name: dashboard-build
+on: push
+jobs:
+  docker-compose:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: build-container
+        run: docker-compose build && docker-compose up -d
+      - name: check-running-containers
+        run: docker ps -a
+      - name: sleep
+        run: sleep 10
+      - name: curl-server
+        run: curl -X GET http://0.0.0.0:8080/about.json
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '14'
+      - name: install dependencies
+        run: npm install
+        working-directory: ./client
+      - name: test
+        run: npm test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
+        working-directory: ./client

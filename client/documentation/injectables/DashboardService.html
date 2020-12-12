@@ -1,0 +1,1874 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Dashboard</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Dashboard</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li>DashboardService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/shared/services/dashboard.service.ts</code>
+        </p>
+
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#deleteUser">deleteUser</a>
+                            </li>
+                            <li>
+                                <a href="#getMicrosoftCalendarEvents">getMicrosoftCalendarEvents</a>
+                            </li>
+                            <li>
+                                <a href="#getMicrosoftCalendars">getMicrosoftCalendars</a>
+                            </li>
+                            <li>
+                                <a href="#getMicrosoftMailboxes">getMicrosoftMailboxes</a>
+                            </li>
+                            <li>
+                                <a href="#getMicrosoftMails">getMicrosoftMails</a>
+                            </li>
+                            <li>
+                                <a href="#getSpotifyArtist">getSpotifyArtist</a>
+                            </li>
+                            <li>
+                                <a href="#getSubredditInfos">getSubredditInfos</a>
+                            </li>
+                            <li>
+                                <a href="#getTwitchStreamInfos">getTwitchStreamInfos</a>
+                            </li>
+                            <li>
+                                <a href="#getTwitchUserInfos">getTwitchUserInfos</a>
+                            </li>
+                            <li>
+                                <a href="#getUserProfile">getUserProfile</a>
+                            </li>
+                            <li>
+                                <a href="#getUsers">getUsers</a>
+                            </li>
+                            <li>
+                                <a href="#getWeatherInfosByCity">getWeatherInfosByCity</a>
+                            </li>
+                            <li>
+                                <a href="#getWidgetConfig">getWidgetConfig</a>
+                            </li>
+                            <li>
+                                <a href="#getWidgetsConfig">getWidgetsConfig</a>
+                            </li>
+                            <li>
+                                <a href="#getYoutubeChannelInfos">getYoutubeChannelInfos</a>
+                            </li>
+                            <li>
+                                <a href="#getYoutubeVideoInfos">getYoutubeVideoInfos</a>
+                            </li>
+                            <li>
+                                <a href="#isGoogleLogged">isGoogleLogged</a>
+                            </li>
+                            <li>
+                                <a href="#isMicrosoftLogged">isMicrosoftLogged</a>
+                            </li>
+                            <li>
+                                <a href="#isRedditLogged">isRedditLogged</a>
+                            </li>
+                            <li>
+                                <a href="#isSpotifyLogged">isSpotifyLogged</a>
+                            </li>
+                            <li>
+                                <a href="#isTwitchLogged">isTwitchLogged</a>
+                            </li>
+                            <li>
+                                <a href="#removeWidgets">removeWidgets</a>
+                            </li>
+                            <li>
+                                <a href="#saveGridConfig">saveGridConfig</a>
+                            </li>
+                            <li>
+                                <a href="#saveQueryConfig">saveQueryConfig</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(httpClient: <a href="https://angular.io/api/common/http/HttpClient" target="_blank">HttpClient</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/shared/services/dashboard.service.ts:24</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>httpClient</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/common/http/HttpClient" target="_blank" >HttpClient</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteUser"></a>
+                    <span class="name">
+                        <b>
+                            deleteUser
+                        </b>
+                        <a href="#deleteUser"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>deleteUser(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="42"
+                            class="link-to-prism">src/app/shared/services/dashboard.service.ts:42</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;[]&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getMicrosoftCalendarEvents"></a>
+                    <span class="name">
+                        <b>
+                            getMicrosoftCalendarEvents
+                        </b>
+                        <a href="#getMicrosoftCalendarEvents"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getMicrosoftCalendarEvents(calendarId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="172"
+                            class="link-to-prism">src/app/shared/services/dashboard.service.ts:172</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>calendarId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;MicrosoftCalendarEvent[]&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getMicrosoftCalendars"></a>
+                    <span class="name">
+                        <b>
+                            getMicrosoftCalendars
+                        </b>
+                        <a href="#getMicrosoftCalendars"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getMicrosoftCalendars()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="166"
+                            class="link-to-prism">src/app/shared/services/dashboard.service.ts:166</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/MicrosoftCalendar.html" target="_self" >Observable&lt;MicrosoftCalendar[]&gt;</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getMicrosoftMailboxes"></a>
+                    <span class="name">
+                        <b>
+                            getMicrosoftMailboxes
+                        </b>
+                        <a href="#getMicrosoftMailboxes"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getMicrosoftMailboxes()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="178"
+                            class="link-to-prism">src/app/shared/services/dashboard.service.ts:178</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;MicrosoftMailbox[]&gt;</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getMicrosoftMails"></a>
+                    <span class="name">
+                        <b>
+                            getMicrosoftMails
+                        </b>
+                        <a href="#getMicrosoftMails"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getMicrosoftMails(mailboxId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="184"
+                            class="link-to-prism">src/app/shared/services/dashboard.service.ts:184</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>mailboxId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/MicrosoftMail.html" target="_self" >Observable&lt;MicrosoftMail[]&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getSpotifyArtist"></a>
+                    <span class="name">
+                        <b>
+                            getSpotifyArtist
+                        </b>
+                        <a href="#getSpotifyArtist"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getSpotifyArtist(artistId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="196"
+                            class="link-to-prism">src/app/shared/services/dashboard.service.ts:196</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>artistId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/SpotifyArtist.html" target="_self" >Observable&lt;SpotifyArtist&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getSubredditInfos"></a>
+                    <span class="name">
+                        <b>
+                            getSubredditInfos
+                        </b>
+                        <a href="#getSubredditInfos"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getSubredditInfos(subreddit: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="111"
+                            class="link-to-prism">src/app/shared/services/dashboard.service.ts:111</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>subreddit</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/Subreddit.html" target="_self" >Observable&lt;Subreddit&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getTwitchStreamInfos"></a>
+                    <span class="name">
+                        <b>
+                            getTwitchStreamInfos
+                        </b>
+                        <a href="#getTwitchStreamInfos"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getTwitchStreamInfos(username: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="94"
+                            class="link-to-prism">src/app/shared/services/dashboard.service.ts:94</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>username</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/TtvStream.html" target="_self" >Observable&lt;TtvStream&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getTwitchUserInfos"></a>
+                    <span class="name">
+                        <b>
+                            getTwitchUserInfos
+                        </b>
+                        <a href="#getTwitchUserInfos"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getTwitchUserInfos(username: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="83"
+                            class="link-to-prism">src/app/shared/services/dashboard.service.ts:83</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>username</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;TtvUser&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getUserProfile"></a>
+                    <span class="name">
+                        <b>
+                            getUserProfile
+                        </b>
+                        <a href="#getUserProfile"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getUserProfile()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="29"
+                            class="link-to-prism">src/app/shared/services/dashboard.service.ts:29</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/User.html" target="_self" >Observable&lt;HttpResponse&lt;User&gt;&gt;</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getUsers"></a>
+                    <span class="name">
+                        <b>
+                            getUsers
+                        </b>
+                        <a href="#getUsers"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getUsers()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="36"
+                            class="link-to-prism">src/app/shared/services/dashboard.service.ts:36</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;[]&gt;</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getWeatherInfosByCity"></a>
+                    <span class="name">
+                        <b>
+                            getWeatherInfosByCity
+                        </b>
+                        <a href="#getWeatherInfosByCity"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getWeatherInfosByCity(city)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="208"
+                            class="link-to-prism">src/app/shared/services/dashboard.service.ts:208</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>city</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/Weather.html" target="_self" >Observable&lt;Weather[]&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getWidgetConfig"></a>
+                    <span class="name">
+                        <b>
+                            getWidgetConfig
+                        </b>
+                        <a href="#getWidgetConfig"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getWidgetConfig(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="160"
+                            class="link-to-prism">src/app/shared/services/dashboard.service.ts:160</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/WidgetConfig.html" target="_self" >Observable&lt;WidgetConfig&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getWidgetsConfig"></a>
+                    <span class="name">
+                        <b>
+                            getWidgetsConfig
+                        </b>
+                        <a href="#getWidgetsConfig"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getWidgetsConfig()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="154"
+                            class="link-to-prism">src/app/shared/services/dashboard.service.ts:154</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/WidgetConfig.html" target="_self" >Observable&lt;WidgetConfig[]&gt;</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getYoutubeChannelInfos"></a>
+                    <span class="name">
+                        <b>
+                            getYoutubeChannelInfos
+                        </b>
+                        <a href="#getYoutubeChannelInfos"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getYoutubeChannelInfos(username: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="48"
+                            class="link-to-prism">src/app/shared/services/dashboard.service.ts:48</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>username</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/YtChannel.html" target="_self" >Observable&lt;YtChannel&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getYoutubeVideoInfos"></a>
+                    <span class="name">
+                        <b>
+                            getYoutubeVideoInfos
+                        </b>
+                        <a href="#getYoutubeVideoInfos"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getYoutubeVideoInfos(url: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="59"
+                            class="link-to-prism">src/app/shared/services/dashboard.service.ts:59</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>url</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/YtChannel.html" target="_self" >Observable&lt;YtChannel&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isGoogleLogged"></a>
+                    <span class="name">
+                        <b>
+                            isGoogleLogged
+                        </b>
+                        <a href="#isGoogleLogged"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>isGoogleLogged()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="77"
+                            class="link-to-prism">src/app/shared/services/dashboard.service.ts:77</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/Authenticated.html" target="_self" >Observable&lt;Authenticated&gt;</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isMicrosoftLogged"></a>
+                    <span class="name">
+                        <b>
+                            isMicrosoftLogged
+                        </b>
+                        <a href="#isMicrosoftLogged"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>isMicrosoftLogged()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="190"
+                            class="link-to-prism">src/app/shared/services/dashboard.service.ts:190</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/Authenticated.html" target="_self" >Observable&lt;Authenticated&gt;</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isRedditLogged"></a>
+                    <span class="name">
+                        <b>
+                            isRedditLogged
+                        </b>
+                        <a href="#isRedditLogged"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>isRedditLogged()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="125"
+                            class="link-to-prism">src/app/shared/services/dashboard.service.ts:125</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/Authenticated.html" target="_self" >Observable&lt;Authenticated&gt;</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isSpotifyLogged"></a>
+                    <span class="name">
+                        <b>
+                            isSpotifyLogged
+                        </b>
+                        <a href="#isSpotifyLogged"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>isSpotifyLogged()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="202"
+                            class="link-to-prism">src/app/shared/services/dashboard.service.ts:202</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/Authenticated.html" target="_self" >Observable&lt;Authenticated&gt;</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isTwitchLogged"></a>
+                    <span class="name">
+                        <b>
+                            isTwitchLogged
+                        </b>
+                        <a href="#isTwitchLogged"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>isTwitchLogged()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="105"
+                            class="link-to-prism">src/app/shared/services/dashboard.service.ts:105</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/Authenticated.html" target="_self" >Observable&lt;Authenticated&gt;</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="removeWidgets"></a>
+                    <span class="name">
+                        <b>
+                            removeWidgets
+                        </b>
+                        <a href="#removeWidgets"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>removeWidgets(ids: <a href="../interfaces/Id.html">Id[]</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="137"
+                            class="link-to-prism">src/app/shared/services/dashboard.service.ts:137</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>ids</td>
+                                    <td>
+                                                <code><a href="../interfaces/Id.html" target="_self" >Id[]</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/WidgetConfig.html" target="_self" >Observable&lt;WidgetConfig&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="saveGridConfig"></a>
+                    <span class="name">
+                        <b>
+                            saveGridConfig
+                        </b>
+                        <a href="#saveGridConfig"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>saveGridConfig(configs: <a href="../interfaces/WidgetGridConfig.html">WidgetGridConfig[]</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="131"
+                            class="link-to-prism">src/app/shared/services/dashboard.service.ts:131</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>configs</td>
+                                    <td>
+                                                <code><a href="../interfaces/WidgetGridConfig.html" target="_self" >WidgetGridConfig[]</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/WidgetConfig.html" target="_self" >Observable&lt;WidgetConfig&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="saveQueryConfig"></a>
+                    <span class="name">
+                        <b>
+                            saveQueryConfig
+                        </b>
+                        <a href="#saveQueryConfig"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>saveQueryConfig(configs: <a href="../interfaces/WidgetQueryConfig.html">WidgetQueryConfig</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="148"
+                            class="link-to-prism">src/app/shared/services/dashboard.service.ts:148</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>configs</td>
+                                    <td>
+                                                <code><a href="../interfaces/WidgetQueryConfig.html" target="_self" >WidgetQueryConfig</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/WidgetConfig.html" target="_self" >Observable&lt;WidgetConfig&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
+import { HttpClient, HttpHeaders, HttpResponse } from &#x27;@angular/common/http&#x27;;
+import { Observable, of } from &#x27;rxjs&#x27;;
+import { Weather } from &#x27;../interfaces/weather&#x27;;
+import { Authenticated } from &#x27;../interfaces/authenticated&#x27;;
+import { SpotifyArtist } from &#x27;../interfaces/spotify-artist&#x27;;
+import { MicrosoftMail } from &#x27;../interfaces/microsoft-mail&#x27;;
+import { MicrosoftMailbox } from &#x27;../interfaces/microsoft-mailbox&#x27;;
+import { MicrosoftCalendarEvent } from &#x27;../interfaces/microsoft-calendar-event&#x27;;
+import { MicrosoftCalendar } from &#x27;../interfaces/microsoft-calendar&#x27;;
+import { WidgetConfig } from &#x27;../interfaces/widget-config&#x27;;
+import { WidgetQueryConfig } from &#x27;../interfaces/widget-query-config&#x27;;
+import { Id } from &#x27;../interfaces/id&#x27;;
+import { WidgetGridConfig } from &#x27;../interfaces/widget-grid-config&#x27;;
+import { Subreddit } from &#x27;../interfaces/subreddit&#x27;;
+import { TtvStream } from &#x27;../interfaces/ttv-stream&#x27;;
+import { TtvUser } from &#x27;../interfaces/ttv-user&#x27;;
+import { YtChannel } from &#x27;../interfaces/yt-channel&#x27;;
+import { User } from &#x27;../interfaces/user&#x27;;
+
+@Injectable({
+    providedIn: &#x27;root&#x27;
+})
+export class DashboardService {
+
+    constructor(private httpClient: HttpClient) {
+    }
+
+    getUserProfile(): Observable&lt;HttpResponse&lt;User&gt;&gt; {
+        return this.httpClient.get&lt;User&gt;(&#x27;/api/user/profile&#x27;, {
+            observe: &#x27;response&#x27;,
+            withCredentials: true
+        });
+    }
+
+    getUsers(): Observable&lt;(User &amp; Id)[]&gt; {
+        return this.httpClient.get&lt;(User &amp; Id)[]&gt;(&#x27;/api/users&#x27;, {
+            withCredentials: true
+        });
+    }
+
+    deleteUser(id: string): Observable&lt;(User &amp; Id)[]&gt; {
+        return this.httpClient.delete&lt;(User &amp; Id)[]&gt;(&#x27;/api/users/&#x27; + id, {
+            withCredentials: true
+        });
+    }
+
+    getYoutubeChannelInfos(username: string): Observable&lt;YtChannel&gt; {
+        username &#x3D; username.trim();
+        if (!username) {
+            return of(null);
+        }
+
+        return this.httpClient.get&lt;YtChannel&gt;(&#x27;/api/google/channels/&#x27; + username, {
+            withCredentials: true
+        });
+    }
+
+    getYoutubeVideoInfos(url: string): Observable&lt;YtChannel&gt; {
+        url &#x3D; url.trim();
+        if (!url) {
+            return of(null);
+        }
+        const parsedUrl &#x3D; new URL(url);
+        if (!parsedUrl) {
+            return of(null);
+        }
+        const videoId &#x3D; parsedUrl.searchParams.get(&#x27;v&#x27;);
+        if (!videoId) {
+            return of(null);
+        }
+        return this.httpClient.get&lt;YtChannel&gt;(&#x27;/api/google/videos/&#x27; + videoId, {
+            withCredentials: true
+        });
+    }
+
+    isGoogleLogged(): Observable&lt;Authenticated&gt; {
+        return this.httpClient.get&lt;Authenticated&gt;(&#x27;/api/google/logged&#x27;, {
+            withCredentials: true
+        });
+    }
+
+    getTwitchUserInfos(username: string): Observable&lt;TtvUser&gt; {
+        username &#x3D; username.trim();
+        if (!username) {
+            return of(null);
+        }
+
+        return this.httpClient.get&lt;TtvUser&gt;(&#x27;/api/twitch/users/&#x27; + username, {
+            withCredentials: true
+        });
+    }
+
+    getTwitchStreamInfos(username: string): Observable&lt;TtvStream&gt; {
+        username &#x3D; username.trim();
+        if (!username) {
+            return of(null);
+        }
+
+        return this.httpClient.get&lt;TtvStream&gt;(&#x27;/api/twitch/streams/&#x27; + username, {
+            withCredentials: true
+        });
+    }
+
+    isTwitchLogged(): Observable&lt;Authenticated&gt; {
+        return this.httpClient.get&lt;Authenticated&gt;(&#x27;/api/twitch/logged&#x27;, {
+            withCredentials: true
+        });
+    }
+
+    getSubredditInfos(subreddit: string): Observable&lt;Subreddit&gt; {
+        subreddit &#x3D; subreddit.trim();
+        if (!subreddit) {
+            return of(null);
+        }
+        if (subreddit.substr(0, 2) &#x3D;&#x3D;&#x3D; &#x27;/r&#x27;) {
+            subreddit &#x3D; subreddit.substring(2);
+        }
+
+        return this.httpClient.get&lt;Subreddit&gt;(&#x27;/api/reddit/subreddits/&#x27; + subreddit, {
+            withCredentials: true
+        });
+    }
+
+    isRedditLogged(): Observable&lt;Authenticated&gt; {
+        return this.httpClient.get&lt;Authenticated&gt;(&#x27;/api/reddit/logged&#x27;, {
+            withCredentials: true
+        });
+    }
+
+    saveGridConfig(configs: WidgetGridConfig[]): Observable&lt;WidgetConfig&gt; {
+        return this.httpClient.post&lt;WidgetConfig&gt;(&#x27;/api/user/widgets/grid&#x27;, configs, {
+            withCredentials: true
+        });
+    }
+
+    removeWidgets(ids: Id[]): Observable&lt;WidgetConfig&gt; {
+        const options &#x3D; {
+            headers: new HttpHeaders({
+                &#x27;Content-Type&#x27;: &#x27;application/json&#x27;
+            }),
+            body: ids
+        };
+
+        return this.httpClient.delete&lt;WidgetConfig&gt;(&#x27;/api/user/widgets&#x27;, options);
+    }
+
+    saveQueryConfig(configs: WidgetQueryConfig): Observable&lt;WidgetConfig&gt; {
+        return this.httpClient.post&lt;WidgetConfig&gt;(&#x27;/api/user/widgets/query&#x27;, [ configs ], {
+            withCredentials: true
+        });
+    }
+
+    getWidgetsConfig(): Observable&lt;WidgetConfig[]&gt; {
+        return this.httpClient.get&lt;WidgetConfig[]&gt;(&#x27;/api/user/widgets&#x27;, {
+            withCredentials: true
+        });
+    }
+
+    getWidgetConfig(id: string): Observable&lt;WidgetConfig&gt; {
+        return this.httpClient.get&lt;WidgetConfig&gt;(&#x27;/api/user/widgets/&#x27; + id, {
+            withCredentials: true
+        });
+    }
+
+    getMicrosoftCalendars(): Observable&lt;MicrosoftCalendar[]&gt; {
+        return this.httpClient.get&lt;MicrosoftCalendar[]&gt;(&#x27;/api/microsoft/calendars&#x27;, {
+            withCredentials: true
+        });
+    }
+
+    getMicrosoftCalendarEvents(calendarId: string): Observable&lt;MicrosoftCalendarEvent[]&gt; {
+        return this.httpClient.get&lt;MicrosoftCalendarEvent[]&gt;(&#x27;/api/microsoft/calendars/&#x27; + calendarId, {
+            withCredentials: true
+        });
+    }
+
+    getMicrosoftMailboxes(): Observable&lt;MicrosoftMailbox[]&gt; {
+        return this.httpClient.get&lt;MicrosoftMailbox[]&gt;(&#x27;/api/microsoft/mail/folders&#x27;, {
+            withCredentials: true
+        });
+    }
+
+    getMicrosoftMails(mailboxId: string): Observable&lt;MicrosoftMail[]&gt; {
+        return this.httpClient.get&lt;MicrosoftMail[]&gt;(&#x27;/api/microsoft/mail/folders/&#x27; + mailboxId, {
+            withCredentials: true
+        });
+    }
+
+    isMicrosoftLogged(): Observable&lt;Authenticated&gt; {
+        return this.httpClient.get&lt;Authenticated&gt;(&#x27;/api/microsoft/logged&#x27;, {
+            withCredentials: true
+        });
+    }
+
+    getSpotifyArtist(artistId: string): Observable&lt;SpotifyArtist&gt; {
+        return this.httpClient.get&lt;SpotifyArtist&gt;(&#x27;/api/spotify/artists/&#x27; + artistId, {
+            withCredentials: true
+        });
+    }
+
+    isSpotifyLogged(): Observable&lt;Authenticated&gt; {
+        return this.httpClient.get&lt;Authenticated&gt;(&#x27;/api/spotify/logged&#x27;, {
+            withCredentials: true
+        });
+    }
+
+    getWeatherInfosByCity(city): Observable&lt;Weather[]&gt; {
+        city &#x3D; city.trim();
+        if (!city) {
+            return of(null);
+        }
+        return this.httpClient.get&lt;Weather[]&gt;(&#x27;/api/weather&#x27;, {
+            withCredentials: true,
+            params: {
+                q: city,
+                degree: &#x27;C&#x27;
+            }
+        });
+    }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'DashboardService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

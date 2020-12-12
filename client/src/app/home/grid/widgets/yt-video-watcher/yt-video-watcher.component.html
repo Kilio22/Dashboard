@@ -1,0 +1,78 @@
+<nb-spinner *ngIf="isLoading">
+</nb-spinner>
+<div *ngIf="!isGoogleAuthed && !isLoading" class="d-flex h-100 justify-content-center">
+    <div class="d-flex align-items-center">
+        <button nbButton outline status="primary" (click)="onLoginClick()">
+            <fa-icon [icon]="faGoogle"></fa-icon>
+            &nbsp; Login with Google
+        </button>
+    </div>
+</div>
+<div *ngIf="isGoogleAuthed && !isLoading">
+    <form (ngSubmit)="onSubmit()" #form="ngForm" aria-labelledby="title">
+        <nb-card>
+            <nb-card-body>
+                <nb-form-field>
+                    <nb-icon nbPrefix icon="search-outline" pack="eva"></nb-icon>
+                    <input type="text" id="input-search-yt-video" [(ngModel)]="searchBuffer" name="search" nbInput
+                           fullWidth
+                           fieldSize="medium"
+                           placeholder="Enter video URL">
+                </nb-form-field>
+            </nb-card-body>
+        </nb-card>
+    </form>
+    <div *ngIf="!video" class="d-flex justify-content-center">
+        <p class="font-weight-bold">Nothing to display</p>
+    </div>
+    <div *ngIf="video">
+        <div class="d-flex justify-content-center">
+            <img
+                [src]="video.thumbnail.url"
+                class="img-fluid" alt="video image">
+        </div>
+        <table class="table table-bordered table-sm mt-1">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">Title</th>
+                <td>{{video.title}}</td>
+            </tr>
+            <tr>
+                <th scope="row">Channel</th>
+                <td>{{video.channelTitle}}</td>
+            </tr>
+            <tr>
+                <th scope="row">Views</th>
+                <td>{{video.statistics.viewCount}}</td>
+            </tr>
+            <tr>
+                <th scope="row">
+                    <fa-icon [icon]="faThumbUp"></fa-icon>
+                    Likes
+                </th>
+                <td>{{video.statistics.likeCount}}</td>
+            </tr>
+            <tr>
+                <th scope="row">
+                    <fa-icon [icon]="faThumbDown"></fa-icon>
+                    Dislikes
+                </th>
+                <td>{{video.statistics.dislikeCount}}</td>
+            </tr>
+            <tr>
+                <th scope="row">
+                    <fa-icon [icon]="faComment"></fa-icon>
+                    Comments
+                </th>
+                <td>{{video.statistics.commentCount}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

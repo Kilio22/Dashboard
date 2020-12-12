@@ -1,0 +1,49 @@
+<nb-spinner *ngIf="isLoading">
+</nb-spinner>
+
+<div *ngIf="!isLoading && !isAuthenticated" class="d-flex justify-content-center h-100">
+    <button nbButton outline status="primary" class="my-auto" (click)="onLoginClick()">
+        <fa-icon [icon]="icons.faMicrosoft"></fa-icon>
+        &nbsp; Login with microsoft
+    </button>
+</div>
+
+<div *ngIf="isAuthenticated" class="d-flex flex-column h-100">
+    <nb-select
+        placeholder="Select mailbox"
+        class="p-2"
+        [selected]="selectedMailbox"
+        (selectedChange)="onMailboxSelected($event)"
+        fullWidth
+    >
+        <nb-select-label>
+            {{ selectedMailbox?.displayName }}
+        </nb-select-label>
+
+        <nb-option *ngFor="let mailbox of mailboxList" [value]="mailbox">
+            <span [className]="mailbox.unreadItemCount > 0 ? 'text-danger' : 'text-secondary'">
+                [{{ mailbox.unreadItemCount }}]
+            </span>
+            <span class="ml-1">
+                {{ mailbox.displayName }}
+            </span>
+        </nb-option>
+    </nb-select>
+    <div *ngIf="errorMsg.length === 0" class="mx-2" style="overflow-x: hidden; overflow-y: auto">
+        <div *ngFor="let mail of mailList; let isFirst = first;">
+            <div class="dropdown-divider" *ngIf="!isFirst"></div>
+            <div>
+                <span class="text-info">[{{ getFormattedMailSendTime(mail) }}]</span>
+            </div>
+            <div>
+                <span>{{ mail.sender.emailAddress.address }}</span>
+            </div>
+            <div class="mt-1">
+                <span>{{ mail.subject }}</span>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="errorMsg.length > 0" class="m-2 h-100">
+        <p class="text-danger">{{ errorMsg }}</p>
+    </div>
+</div>

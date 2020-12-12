@@ -1,0 +1,124 @@
+{
+  "services": [
+    {
+      "name": "Google",
+      "widgets": [
+        {
+          "name": "Youtube channel watcher",
+          "description": "Use this widget to display stats of a given Youtube channel.",
+          "params": [
+            {
+              "name": "username",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "name": "Youtube video watcher",
+          "description": "Use this widget to display stats of a given Youtube video.",
+          "params": [
+            {
+              "name": "id",
+              "type": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Microsoft",
+      "widgets": [
+        {
+          "name": "Microsoft mail center",
+          "description": "Easily catch up with your unread emails!",
+          "params": [
+            {
+              "name": "id",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "name": "Microsoft calendar resume",
+          "description": "View your daily calendars events!",
+          "params": [
+            {
+              "name": "id",
+              "type": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Twitch",
+      "widgets": [
+        {
+          "name": "Twitch user watcher",
+          "description": "Use this widget to display stats of a given Twitch user.",
+          "params": [
+            {
+              "name": "username",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "name": "Twitch stream watcher",
+          "description": "Use this widget to display stats of a given Twitch online streamer.",
+          "params": [
+            {
+              "name": "username",
+              "type": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Spotify",
+      "widgets": [
+        {
+          "name": "Spotify artist statistics",
+          "description": "Monitor stats of a given spotify artist.",
+          "params": [
+            {
+              "name": "id",
+              "type": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Reddit",
+      "widgets": [
+        {
+          "name": "Reddit subreddit watcher",
+          "description": "Use this widget to display stats of a given Reddit subreddit.",
+          "params": [
+            {
+              "name": "name",
+              "type": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Weather",
+      "widgets": [
+        {
+          "name": "Weather viewer",
+          "description": "Use this widget to display the weather of a given city.",
+          "params": [
+            {
+              "name": "city",
+              "type": "string"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+<div class="mb-2 d-flex">
+    <div ngbDropdown class="mr-auto">
+        <button nbButton status="primary" ngbDropdownToggle>Select widgets</button>
+        <div ngbDropdownMenu>
+            <div *ngFor="let service of serviceList; let isFirst = first;">
+                <div class="dropdown-divider" *ngIf="!isFirst"></div>
+                <h6 class="dropdown-header">
+                    <fa-icon [icon]="service.icon" class="mr-1"></fa-icon>
+                    {{ service.name }}
+                </h6>
+                <button *ngFor="let widget of service.widgets"
+                        ngbDropdownItem
+                        (click)="addItem(widget, true)"
+                        [nbPopover]="widget.desc"
+                        [nbPopoverPlacement]="'right'"
+                        [nbPopoverTrigger]="'hint'"
+                >
+                    [{{ countSelectedWidget(widget).toString() }}] {{ widget.name }}
+                </button>
+            </div>
+        </div>
+    </div>
+    <button nbButton status="danger" (click)="removeAllWidgets()">
+        Remove all widgets
+    </button>
+</div>
+<gridster [options]="options">
+    <gridster-item *ngFor="let item of gridItems" [item]="item">
+        <div class="d-flex flex-column h-100">
+            <app-grid-header
+                [name]="item.name"
+                [(refreshRate)]="item.refreshRate"
+                (refreshRateChange)="saveGridLayoutToLocalStorage()"
+                (removeClick)="removeItem(item.id)">
+            </app-grid-header>
+            <ng-container
+                appWidgetRender
+                [componentRef]="item.widgetId"
+                [widgetId]="item.id"
+                [widgetRefreshRate]="item.refreshRate">
+            </ng-container>
+        </div>
+    </gridster-item>
+</gridster>

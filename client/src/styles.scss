@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,600,700,800&display=swap');
+
+@import 'themes';
+
+@import '~@nebular/theme/styles/globals';
+@import '~@nebular/auth/styles/all';
+@import '~@nebular/theme/styles/core/functions';
+@import '~@nebular/theme/styles/core/mixins';
+
+@include nb-install() {
+    @include nb-theme-global();
+    @include nb-theme-global();
+    @include nb-auth-global();
+};
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+/* You can add global styles to this file, and also import other style files */
