@@ -6,7 +6,7 @@ The goal of this project was to create a dashboard web application. According to
 
 On the technical side, on one hand, we chose to use **Javascript**, **Express.js** and **Passport.js** for the back-end. While on the other hand, we chose **Angular** for the front-end. Our project has to be built with **docker-compose**.
 
-### Services and associated widgets description:
+## Services and associated widgets description:
 - **Google service**: This service allows the user to authenticate with his Google account. Therefore, the user will be able to see different YouTube statistics, depending on the widget: 
     - Youtube channel watcher: Use this widget to display stats of a given Youtube channel.
     - Youtube video watcher: Use this widget to display stats of a given Youtube video.
@@ -22,3 +22,12 @@ On the technical side, on one hand, we chose to use **Javascript**, **Express.js
     - Reddit subreddit watcher: Use this widget to display stats of a given Reddit subreddit.
 - **Weather service**: This service allows to fetch some weather data.
     - Weather viewer: Use this widget to display the weather of a given city.
+
+## How to run the app ?
+First, you must fill out the necessary informations such as the CLIENT_ID, the SECRET_KEY, the authority etc for each service inside the server / client code.  
+After that, make sure Docker and docker-compose command are installed.  
+Finally, simply run the following command at the root of the repository:  
+```sh
+$> docker-compose up --build -d
+```
+The application will be available on ``localhost:80``.
